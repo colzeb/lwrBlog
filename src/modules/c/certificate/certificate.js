@@ -7,11 +7,19 @@ export default class Certificate extends LightningElement {
             typeAttributes: {
                 label: {
                     fieldName: 'Name'
-            },
+                },
             target:'_blank'
+            },
+            cellAttributes: {
+                class: 'slds-text-heading_small'
             }
         },
-        { label: 'Date', fieldName: 'Date', type: 'date' },
+        { label: 'Date', fieldName: 'Date', type: 'date', 
+            cellAttributes:{
+                alignment: 'right'
+            },
+            fixedWidth: 100
+        },
     ];
 
     data = [

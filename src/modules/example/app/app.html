@@ -1,7 +1,23 @@
 <template>
-        <c-nav-bar></c-nav-bar>
-        <c-header-resume></c-header-resume>
-        <c-info></c-info>
-        <c-skill></c-skill>
-        <c-certificate></c-certificate>
+        <c-global-menu class="slds-m-top_xx-large"></c-global-menu>
+
+        <lightning-card>
+               <lightning-button variant="neutral" label="Download" title="Download Resume" slot="action" onclick={handleClick}></lightning-button>
+               
+                                <c-header-resume class="card"></c-header-resume>
+ 
+                <div class="slds-grid">
+                        <div class="slds-col slds-size_4-of-12">
+                                <div class="card slds-col slds-size_4-of-12"><c-info ></c-info></div>
+                                
+                                <c-skill class="card"></c-skill>
+                                <c-certificate class="card"></c-certificate>
+                        </div>
+                        <div class="slds-col slds-size_8-of-12 slds-size_4-of-12 ">
+                                <c-skill class="card"></c-skill>
+                        </div>
+        
+                </div>
+                <p slot="footer">Card Footer</p>
+        </lightning-card>
 </template>
